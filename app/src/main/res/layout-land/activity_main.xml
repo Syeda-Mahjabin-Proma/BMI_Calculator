@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bmi_img" />
+
+        <TextView
+            android:id="@+id/text_view_bmicalculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="BMI Calculator"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radio_button_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/enter_age_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Age: "
+                android:textAlignment="center"
+                android:textSize="17sp" />
+
+
+            <EditText
+                android:id="@+id/edit_text_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/enter_height_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Height: "
+                android:textAlignment="center"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/height_feet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Feet"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/height_inch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Inch"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/enter_weight_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Weight: "
+                android:textAlignment="center"
+                android:textSize="17sp" />
+
+
+            <EditText
+                android:id="@+id/weight_kg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kilogram"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="CALCULATE" />
+
+    <TextView
+        android:id="@+id/fnal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="17.5dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
