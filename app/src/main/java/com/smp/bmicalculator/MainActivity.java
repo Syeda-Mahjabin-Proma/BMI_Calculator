@@ -106,9 +106,7 @@ public class MainActivity extends AppCompatActivity {
             reset_text.setText(finalOutcome + "\n" + preference);
         }
         Toast.makeText(MainActivity.this, "Your BMA Calculation is Done!!!", Toast.LENGTH_SHORT).show();
-
     }
-
 
     private void finalDecisionKids() {
         if (radio_button_male.isChecked()) {
