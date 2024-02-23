@@ -2,7 +2,6 @@ package com.smp.bmicalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpButtonOnClickListener() {
         button_calculate.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 if (radio_button_male.isChecked() || radio_button_female.isChecked()) {
@@ -83,14 +81,13 @@ public class MainActivity extends AppCompatActivity {
         return bmi_height;
     }
 
-    @SuppressLint("SetTextI18n")
     private void finalDecisionAdult(double[] bmi_height) {
         double bmi = bmi_height[0];
         double height = bmi_height[1];
         double min_weight = 18.5 * (height * height);
         double max_weight = 24.9 * (height * height);
-        @SuppressLint("DefaultLocale") String preference = "Your Healthy Weight Range is from " + String.format("%.0f", min_weight) + " kg to " + String.format("%.0f", max_weight) + " kg. ";
-        @SuppressLint("DefaultLocale") String bmiString = String.format("%.1f", bmi);
+        String preference = "Your Healthy Weight Range is from " + String.format("%.0f", min_weight) + " kg to " + String.format("%.0f", max_weight) + " kg. ";
+        String bmiString = String.format("%.1f", bmi);
         String finalOutcome;
         if (bmi == 0) {
             finalOutcome = ("Please Fill-up Height & Weight Properly");
@@ -113,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @SuppressLint("SetTextI18n")
     private void finalDecisionKids() {
         if (radio_button_male.isChecked()) {
             reset_text.setText("As You are Under 18, Consult With Your Doctor about Boys Healthy Weight Range");
@@ -121,4 +117,18 @@ public class MainActivity extends AppCompatActivity {
             reset_text.setText("As You are Under 18, Consult With Your Doctor about Girls Healthy Weight Range");
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("resetText", reset_text.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String resetText = savedInstanceState.getString("resetText");
+        reset_text.setText(resetText);
+    }
+
 }
