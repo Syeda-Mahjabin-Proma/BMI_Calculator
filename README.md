@@ -65,6 +65,11 @@ This App is:
 
 ---
 
+## Sample Pictures:
+![bmiCalc](https://github.com/user-attachments/assets/9f1db8cd-afcc-42ed-9452-072b2fb280b7)
+
+
+---
 ## Installation & Run Locally
 
 ### Clone the Repository
@@ -82,7 +87,7 @@ git clone https://github.com/Syeda-Mahjabin-Proma/DailyFusion.git
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component    | Technology                  |
 | ------------ | --------------------------- |
