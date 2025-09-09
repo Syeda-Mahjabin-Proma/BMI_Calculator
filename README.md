@@ -75,7 +75,7 @@ This App is:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Syeda-Mahjabin-Proma/DailyFusion.git
+git clone https://github.com/Syeda-Mahjabin-Proma/BMI_Calculator.git
 ```
 
 ### Open in Android Studio
