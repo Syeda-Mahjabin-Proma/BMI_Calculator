@@ -15,7 +15,7 @@ This App is:
 
 ---
 
-## Features
+## Features 
 
 ### BMI Calculation
 
